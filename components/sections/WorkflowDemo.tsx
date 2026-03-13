@@ -77,7 +77,7 @@ export default function WorkflowDemo() {
         pointerEvents: "none",
       }} />
 
-      <div className="max-w-[1200px] mx-auto" style={{
+      <div className="max-w-[1200px] mx-auto workflow-grid" style={{
         display: "grid",
         gridTemplateColumns: "3fr 7fr",
         gap: "4rem",
@@ -330,6 +330,14 @@ export default function WorkflowDemo() {
             })}
           </svg>
         </motion.div>
+      <style>{`
+        @media (max-width: 768px) {
+          .workflow-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+        }
+      `}</style>
       </div>
     </section>
   );

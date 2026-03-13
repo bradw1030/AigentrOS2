@@ -8,7 +8,7 @@ export default function FounderSection() {
   return (
     <section id="about" style={{ padding: "6rem 1.5rem" }}>
       <div
-        className="max-w-[1200px] mx-auto"
+        className="max-w-[1200px] mx-auto founder-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -165,7 +165,10 @@ export default function FounderSection() {
 
       <style>{`
         @media (max-width: 768px) {
-          .founder-grid { grid-template-columns: 1fr !important; }
+          .founder-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
         }
       `}</style>
     </section>

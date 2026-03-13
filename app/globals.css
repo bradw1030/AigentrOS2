@@ -115,6 +115,16 @@ body::before {
   border-color: var(--accent-orange);
 }
 
+/* Mobile responsive section padding */
+@media (max-width: 768px) {
+  section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
 /* Dot grid pattern */
 .dot-grid {
   background-image: radial-gradient(circle, var(--border-subtle) 1px, transparent 1px);

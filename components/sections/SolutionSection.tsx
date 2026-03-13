@@ -7,7 +7,7 @@ export default function SolutionSection() {
   return (
     <section id="automations" style={{ padding: "6rem 1.5rem", backgroundColor: "var(--bg-secondary)" }}>
       <div
-        className="max-w-[1200px] mx-auto"
+        className="max-w-[1200px] mx-auto solution-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -91,7 +91,10 @@ export default function SolutionSection() {
 
       <style>{`
         @media (max-width: 768px) {
-          .solution-grid { grid-template-columns: 1fr !important; }
+          .solution-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
         }
       `}</style>
     </section>

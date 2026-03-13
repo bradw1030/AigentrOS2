@@ -57,6 +57,7 @@ export default function ProblemSection() {
 
         {/* Two columns: stats left, text right */}
         <div
+          className="problem-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -178,6 +179,14 @@ export default function ProblemSection() {
           </motion.div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .problem-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

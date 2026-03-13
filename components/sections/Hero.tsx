@@ -27,6 +27,7 @@ export default function Hero() {
       </div>
 
       <div
+        className="hero-grid"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
@@ -118,6 +119,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
+            className="hero-buttons"
             style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginBottom: "2rem" }}
           >
             <CTAButton label="Explore the Framework" href="/framework" variant="primary" />
@@ -167,7 +169,25 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 768px) {
-          .hero-inner { grid-template-columns: 1fr !important; }
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+          }
+          .hero-grid > div:first-child {
+            padding-right: 0 !important;
+            width: 100% !important;
+          }
+          .hero-grid > div:first-child > div[style*="borderLeft"] {
+            border-left: none !important;
+            padding-left: 0 !important;
+            align-items: center;
+          }
+          .hero-grid > div:last-child {
+            display: none !important;
+          }
+          .hero-buttons {
+            justify-content: center;
+          }
         }
       `}</style>
     </section>
