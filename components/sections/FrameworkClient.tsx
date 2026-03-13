@@ -308,8 +308,51 @@ export default function FrameworkClient() {
           </p>
         </div>
 
-        {/* ── Machine ── */}
-        <div style={{
+        {/* ── Mobile accordion ── */}
+        <div className="framework-mobile">
+          {pillars.map(p => {
+            const isOpen = active === p.id;
+            return (
+              <div key={p.id} style={{ borderRadius: 8, overflow: "hidden", border: `1.5px solid ${isOpen ? p.color : p.color + "55"}`, marginBottom: "0.875rem" }}>
+                <button
+                  onClick={() => toggle(p.id)}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "1rem 1.25rem",
+                    background: isOpen ? `linear-gradient(135deg, ${p.color}30, ${p.color}10)` : `linear-gradient(135deg, ${p.color}14, ${p.color}06)`,
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.875rem" }}>
+                    <span style={{ fontFamily: "monospace", fontSize: "0.7rem", color: p.color, opacity: 0.7 }}>{p.number}</span>
+                    <span style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "1rem", color: p.color }}>{p.name}</span>
+                  </div>
+                  <span style={{ color: p.color, fontSize: "1.1rem", transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▾</span>
+                </button>
+                {isOpen && (
+                  <div style={{ padding: "1rem 1.25rem", background: "#0A0A0A", borderTop: `1px solid ${p.color}30` }}>
+                    <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.875rem", color: p.color, fontWeight: 500, marginBottom: "0.875rem" }}>{p.tagline}</p>
+                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.625rem" }}>
+                      {p.skills.map((skill, i) => (
+                        <li key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
+                          <span style={{ color: p.color, fontSize: "0.65rem", flexShrink: 0, marginTop: 4 }}>▶</span>
+                          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.875rem", color: "#999", lineHeight: 1.5 }}>{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* ── Machine (desktop only) ── */}
+        <div className="framework-desktop" style={{
           background: "linear-gradient(180deg, #0D0D0D 0%, #070707 100%)",
           border: "1px solid #181818",
           borderRadius: 10,
@@ -448,13 +491,11 @@ export default function FrameworkClient() {
         </div>
       </div>
       <style>{`
+        .framework-mobile { display: none; }
+        .framework-desktop { display: block; }
         @media (max-width: 768px) {
-          .machine-panel {
-            grid-template-columns: 1fr !important;
-          }
-          .machine-sidebar {
-            display: none !important;
-          }
+          .framework-mobile { display: block; }
+          .framework-desktop { display: none !important; }
         }
       `}</style>
     </section>
