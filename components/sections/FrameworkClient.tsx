@@ -296,7 +296,7 @@ export default function FrameworkClient() {
             lineHeight: 1.1,
             marginBottom: "0.875rem",
           }}>
-            5 Pillars.{" "}
+            5 Pillars.<br />
             <span style={{ background: "linear-gradient(135deg, #FF6B2B, #A8FF3E)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               1 System.
             </span>
@@ -348,10 +348,10 @@ export default function FrameworkClient() {
           </div>
 
           {/* Main panel — 3 columns */}
-          <div style={{ display: "grid", gridTemplateColumns: "120px 1fr 120px" }}>
+          <div className="machine-panel" style={{ display: "grid", gridTemplateColumns: "120px 1fr 120px" }}>
 
             {/* Left sidebar */}
-            <div style={{
+            <div className="machine-sidebar" style={{
               borderRight: "1px solid #111",
               padding: "1.5rem 0.875rem",
               display: "flex", flexDirection: "column", alignItems: "center", gap: "1.25rem",
@@ -401,7 +401,7 @@ export default function FrameworkClient() {
             </div>
 
             {/* Right sidebar */}
-            <div style={{
+            <div className="machine-sidebar" style={{
               borderLeft: "1px solid #111",
               padding: "1.5rem 0.875rem",
               display: "flex", flexDirection: "column", alignItems: "center", gap: "1.25rem",
@@ -447,6 +447,16 @@ export default function FrameworkClient() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .machine-panel {
+            grid-template-columns: 1fr !important;
+          }
+          .machine-sidebar {
+            display: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
