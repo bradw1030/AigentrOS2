@@ -173,7 +173,7 @@ export default function ProblemSection() {
                 fontSize: "1.125rem",
               }}
             >
-              AgentrOS simply gives that talent the systems it needs to reach a whole new level.
+              AIgentrOS simply gives that talent the systems it needs to reach a whole new level.
             </p>
           </motion.div>
         </div>

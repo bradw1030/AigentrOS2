@@ -18,39 +18,6 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Dot grid pattern */}
-      <div style={{
-        position: "absolute",
-        inset: 0,
-        backgroundImage: "radial-gradient(circle, rgba(237,217,189,0.65) 1px, transparent 1px)",
-        backgroundSize: "28px 28px",
-        pointerEvents: "none",
-        zIndex: 0,
-      }} />
-
-      {/* Orange glow — top right */}
-      <div style={{
-        position: "absolute",
-        top: "-120px",
-        right: "-80px",
-        width: "640px",
-        height: "640px",
-        borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(255,85,0,0.08) 0%, transparent 65%)",
-        pointerEvents: "none",
-      }} />
-
-      {/* Lime glow — bottom left */}
-      <div style={{
-        position: "absolute",
-        bottom: "-60px",
-        left: "-60px",
-        width: "420px",
-        height: "420px",
-        borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(56,176,0,0.06) 0%, transparent 65%)",
-        pointerEvents: "none",
-      }} />
 
       {/* Wave divider into next section */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, lineHeight: 0, pointerEvents: "none" }}>
@@ -107,7 +74,7 @@ export default function Hero() {
               marginBottom: "1.25rem",
             }}
           >
-            AgentrOS leverages AI agents & automation to transform the way
+            AIgentrOS leverages AI agents & automation to transform the way
             insurance agencies sell, service, and scale.
           </motion.p>
 

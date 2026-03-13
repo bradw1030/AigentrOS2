@@ -79,7 +79,7 @@ export default function FounderSection() {
               marginBottom: "2rem",
             }}
           >
-            AgentrOS was built to help agencies harness that opportunity and operate at a new level.
+            AIgentrOS was built to help agencies harness that opportunity and operate at a new level.
           </p>
 
           {/* Credential pills */}

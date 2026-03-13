@@ -29,7 +29,7 @@ export default function SolutionSection() {
         >
           <img
             src="/images/rightbot.png"
-            alt="AgentrOS Bot"
+            alt="AIgentrOS Bot"
             style={{
               width: "100%",
               maxWidth: "420px",

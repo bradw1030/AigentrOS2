@@ -49,7 +49,7 @@ export default function ContactPage() {
               maxWidth: "560px",
               margin: "0 auto",
             }}>
-              Book a free discovery call to explore what AgentrOS could look like inside your organization — no pressure, no pitch deck.
+              Book a free discovery call to explore what AIgentrOS could look like inside your organization — no pressure, no pitch deck.
             </p>
           </motion.div>
 
