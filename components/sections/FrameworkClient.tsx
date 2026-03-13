@@ -68,8 +68,8 @@ const pillars = [
     id: "analytics",
     number: "05",
     name: "Analytics",
-    color: "#A8FF3E",
-    glow: "rgba(168,255,62,0.5)",
+    color: "#FF3E8A",
+    glow: "rgba(255,62,138,0.5)",
     tagline: "Performance clarity. Continuous improvement.",
     skills: [
       "Sales call transcription, scoring & insight extraction",
